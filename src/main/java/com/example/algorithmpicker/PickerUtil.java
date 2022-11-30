@@ -1,6 +1,7 @@
 package com.example.algorithmpicker;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
 import java.nio.file.*;
@@ -34,7 +35,7 @@ public class PickerUtil {
 
 	private static Map<String, List<String>> getAlgorithmsByKind() throws IOException {
 		var json = new String(Files.readAllBytes(Paths.get("src/main/resources/algorithms.json")));
-		return new Gson().fromJson(json, Map.class);
+		return new Gson().fromJson(json, new TypeToken<>() {}.getType());
 	}
 
 }
