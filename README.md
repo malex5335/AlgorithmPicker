@@ -1,6 +1,6 @@
 # Random Algorithm picker
 
-This is a simple spring application that picks a random algorithm from a list of algorithms.
+This is a simple spring application that picks some random algorithms from a list of algorithms.
 
 ## How to run
 
