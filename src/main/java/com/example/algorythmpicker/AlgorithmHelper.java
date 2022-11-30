@@ -27,7 +27,9 @@ public class AlgorithmHelper {
 					.flatMap(Collection::stream)
 					.toList();
 		}
-		return getAlgorithmsByKind().getOrDefault(category, Collections.emptyList());
+		if(!getAlgorithmsByKind().containsKey(category))
+			throw new IllegalArgumentException("Category not found");
+		return getAlgorithmsByKind().get(category);
 	}
 
 	private static Map<String, List<String>> getAlgorithmsByKind() throws IOException {

@@ -24,22 +24,16 @@ public class AlgorithmPickerApplication {
 		return getAlgorithmsAsJson("all", amount);
 	}
 
-	@GetMapping(value= "/{category}", produces = "application/json")
+	@GetMapping(value= "/{category}/**", produces = "application/json")
 	@ResponseBody
-	public String getKind(@PathVariable String category, @RequestParam(value="amount", defaultValue = "3") int amount) {
-		return getAlgorithmsAsJson(category, amount);
-	}
-
-	@GetMapping(value= "/{category}/", produces = "application/json")
-	@ResponseBody
-	public String getKindTailing(@PathVariable String category, @RequestParam(value="amount", defaultValue = "3") int amount) {
+	public String getCategory(@PathVariable String category, @RequestParam(value="amount", defaultValue = "3") int amount) {
 		return getAlgorithmsAsJson(category, amount);
 	}
 
 	public String getAlgorithmsAsJson(String category, int amount) {
 		try {
 			return new Gson().toJson(getRandomAlgorithms(category, LocalDate.now(), amount));
-		} catch (IOException e) {
+		} catch (Exception e) {
 			return String.format("{\"error\": \"%s\"}", e).replace("\\", "/");
 		}
 	}
