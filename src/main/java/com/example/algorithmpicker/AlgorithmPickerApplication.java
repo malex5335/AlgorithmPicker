@@ -1,4 +1,4 @@
-package com.example.algorythmpicker;
+package com.example.algorithmpicker;
 
 import com.google.gson.Gson;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 
-import static com.example.algorythmpicker.AlgorithmHelper.*;
+import static com.example.algorithmpicker.PickerUtil.*;
 
 @RestController
 @SpringBootApplication

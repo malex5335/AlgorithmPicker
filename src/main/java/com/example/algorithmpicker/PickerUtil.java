@@ -1,4 +1,4 @@
-package com.example.algorythmpicker;
+package com.example.algorithmpicker;
 
 import com.google.gson.Gson;
 
@@ -7,7 +7,7 @@ import java.nio.file.*;
 import java.time.LocalDate;
 import java.util.*;
 
-public class AlgorithmHelper {
+public class PickerUtil {
 
 	public static Set<String> getRandomAlgorithms(String category, LocalDate date, int amount) throws IOException {
 		var selection = new LinkedHashSet<String>();
@@ -22,7 +22,7 @@ public class AlgorithmHelper {
 	}
 
 	private static List<String> getAlgorithms(String category) throws IOException {
-		if ("all".equals(category)) {
+		if("all".equals(category)) {
 			return getAlgorithmsByKind().values().stream()
 					.flatMap(Collection::stream)
 					.toList();
