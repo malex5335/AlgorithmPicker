@@ -4,12 +4,32 @@ This is a simple spring application that picks some random algorithms from a lis
 
 ## How to run
 
+### Native
+
 1. Clone the repository
 2. Start the Spring application
 3. Open `localhost:8080` in your browser
 4. Refresh the page every day to get new algorithms to learn
 5. Enjoy!
 6. If you want to add more algorithms, add them to the `/src/main/resources/algorithms.json` file
+
+### With Docker-Compose
+
+1. Clone the repository
+2. Run `docker-compose up -d`
+3. Open `localhost:8080` in your browser
+4. Refresh the page every day to get new algorithms to learn
+5. Enjoy!
+6. If you want to add more algorithms, add them to the `/src/main/resources/algorithms.json` file
+   - run `docker-compose restart --build` to restart the application
+
+### With Kubernetes
+
+1. Copy `kubernetes.yaml` to your Kubernetes cluster
+2. Run `kubectl apply -f kubernetes.yaml`
+3. Open the app in your browser using the LoadBalancer IP
+4. Refresh the page every day to get new algorithms to learn
+5. Enjoy!
 
 ## How the Rest API works
 
