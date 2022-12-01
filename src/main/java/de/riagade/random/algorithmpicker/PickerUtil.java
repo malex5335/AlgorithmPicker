@@ -1,4 +1,4 @@
-package com.example.algorithmpicker;
+package de.riagade.random.algorithmpicker;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

@@ -7,7 +7,7 @@ This is a simple spring application that picks some random algorithms from a lis
 ### Native
 
 1. Clone the repository
-2. Start the Spring application
+2. Execute the main class `de.riagade.random.algorithmpicker.AlgorithmPickerApplication`
 3. Open `localhost:8080` in your browser
 4. Refresh the page every day to get new algorithms to learn
 5. Enjoy!

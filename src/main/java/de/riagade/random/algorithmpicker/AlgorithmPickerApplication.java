@@ -1,4 +1,4 @@
-package com.example.algorithmpicker;
+package de.riagade.random.algorithmpicker;
 
 import com.google.gson.Gson;
 import org.springframework.boot.SpringApplication;
@@ -6,8 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-
-import static com.example.algorithmpicker.PickerUtil.*;
 
 @RestController
 @SpringBootApplication
@@ -31,7 +29,7 @@ public class AlgorithmPickerApplication {
 
 	public String getAlgorithmsAsJson(String category, int amount) {
 		try {
-			return new Gson().toJson(getRandomAlgorithms(category, LocalDate.now(), amount));
+			return new Gson().toJson(PickerUtil.getRandomAlgorithms(category, LocalDate.now(), amount));
 		} catch (Exception e) {
 			return String.format("{\"error\": \"%s\"}", e).replace("\\", "/");
 		}
