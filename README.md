@@ -19,7 +19,6 @@ This is a simple spring application that picks some random algorithms from a lis
 3. Open `localhost:8080` in your browser
 4. Refresh the page every day to get new algorithms to learn
 5. Enjoy!
-6. If you want to add more algorithms, add them to the `/src/main/resources/algorithms.json` file
 
 ### With Docker-Compose
 
@@ -28,8 +27,6 @@ This is a simple spring application that picks some random algorithms from a lis
 3. Open `localhost:8080` in your browser
 4. Refresh the page every day to get new algorithms to learn
 5. Enjoy!
-6. If you want to add more algorithms, add them to the `/src/main/resources/algorithms.json` file
-   - run `docker-compose restart --build` to restart the application
 
 ### With Kubernetes
 
@@ -53,3 +50,14 @@ This is a simple spring application that picks some random algorithms from a lis
 4. The random algorithms will change based on the current date
    - i.e. if you refresh the page at 11:59 PM, the algorithms will not have changed
    - if you refresh the page at 12:00 AM, the algorithms will change
+
+## How to contribute
+
+1. Create a new branch for your changes
+2. Add your algorithms to the `src/main/resources/algorithms.json` file
+   - make sure to follow the same format as the other algorithms
+   - make sure to add the algorithms to the correct category
+   - create a new category if necessary or put them in the `other` category
+   - You can also rearrange existing algorithms into the category where they belong
+3. Create a pull request
+4. Wait for the pull request to be merged
