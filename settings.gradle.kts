@@ -1,1 +1,1 @@
-rootProject.name = "AlgorithmPicker"
+rootProject.name = "algorithm-picker"

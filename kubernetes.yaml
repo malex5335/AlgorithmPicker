@@ -4,7 +4,7 @@ metadata:
   name: picker-service
 spec:
   selector:
-    app: picker
+    app: algorithm-picker
   ports:
     - protocol: TCP
       port: 80
@@ -19,12 +19,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: picker
+      app: algorithm-picker
   template:
     metadata:
       labels:
-        app: picker
+        app: algorithm-picker
     spec:
       containers:
-        - name: picker
+        - name: algorithm-picker
           image: malex5335/algorithm-picker:latest
