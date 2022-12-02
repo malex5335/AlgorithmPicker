@@ -53,11 +53,12 @@ This is a simple spring application that picks some random algorithms from a lis
 
 ## How to contribute
 
-1. Create a new branch for your changes
-2. Add your algorithms to the `src/main/resources/algorithms.json` file
+1. Create a new branch for your changes / additions
+2. If You add algorithms:
+   - edit the `src/main/resources/algorithms.json` file
    - make sure to follow the same format as the other algorithms
-   - make sure to add the algorithms to the correct category
    - create a new category if necessary or put them in the `other` category
    - You can also rearrange existing algorithms into the category where they belong
 3. Create a pull request
 4. Wait for the pull request to be merged
+5. Be proud that you contributed to this project!
