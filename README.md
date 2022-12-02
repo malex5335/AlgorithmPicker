@@ -4,6 +4,14 @@ This is a simple spring application that picks some random algorithms from a lis
 
 ## How to run
 
+### With Docker (recommended)
+
+1. `docker run --name=algorithm-picker -p 8080:8080 -d --rm malex5335/algorithm-picker`
+2. Open `localhost:8080` in your browser
+3. Refresh the page every day to get new algorithms to learn
+4. Stop the container with `docker stop algorithm-picker`
+5. Enjoy!
+
 ### Native
 
 1. Clone the repository
